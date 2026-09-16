@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "name": "Mobile App v2",
+      "owner": "Jordan Lee",
+      "status": "In review",
+      "recentActivity": "User testing wrapped with 94% task success.",
+      "priority": "High",
+      "progress": 78
+    },
+    {
+      "name": "Checkout Redesign",
+      "owner": "Maya Chen",
+      "status": "Blocked",
+      "recentActivity": "Waiting on legal review for new payment terms.",
+      "priority": "High",
+      "progress": 54
+    },
+    {
+      "name": "Q4 Brand Refresh",
+      "owner": "Sam Kim",
+      "status": "At risk",
+      "recentActivity": "Scope expanded with two new campaign surfaces.",
+      "priority": "Medium",
+      "progress": 43
+    },
+    {
+      "name": "API Reliability",
+      "owner": "Alex Morgan",
+      "status": "On track",
+      "recentActivity": "Security audit completed with no critical findings.",
+      "priority": "High",
+      "progress": 86
+    },
+    {
+      "name": "Customer Research",
+      "owner": "Riley Brooks",
+      "status": "On track",
+      "recentActivity": "Research brief shared with product and design.",
+      "priority": "Low",
+      "progress": 66
+    },
+    {
+      "name": "Growth Experiments",
+      "owner": "Nina Patel",
+      "status": "On track",
+      "recentActivity": "Homepage experiment reached 10,000 sessions.",
+      "priority": "Medium",
+      "progress": 61
+    }
+  ]
+}

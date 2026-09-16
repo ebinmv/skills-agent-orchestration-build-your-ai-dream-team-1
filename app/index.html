@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A clear, current view of project health, momentum, and risks.">
+  <title>Project Pulse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="dashboard">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Project Pulse home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>
+          <strong>Project Pulse</strong>
+          <small>Portfolio command center</small>
+        </span>
+      </a>
+      <div class="header-tools">
+        <span class="sync-status"><span class="sync-dot" aria-hidden="true"></span>Synced just now</span>
+        <button class="avatar" type="button" aria-label="Open account menu">MC</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Wednesday, September 16, 2026</p>
+          <h1 id="page-title">Project Pulse</h1>
+          <p class="hero-copy">A focused view of what is moving, what is healthy, and where your team needs attention.</p>
+        </div>
+        <div class="health-summary" aria-label="Overall portfolio health">
+          <div class="health-ring" aria-hidden="true"><span>82</span></div>
+          <div>
+            <span class="label">Overall health</span>
+            <strong>Good momentum</strong>
+            <small>+6% from last week</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Portfolio summary">
+        <article class="metric-card">
+          <span class="metric-icon blue" aria-hidden="true">↗</span>
+          <div><span class="metric-label">Active projects</span><strong>08</strong><small>Across 4 teams</small></div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon green" aria-hidden="true">✓</span>
+          <div><span class="metric-label">On track</span><strong>06</strong><small>75% of portfolio</small></div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon amber" aria-hidden="true">!</span>
+          <div><span class="metric-label">Need attention</span><strong>02</strong><small>1 blocked, 1 at risk</small></div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon purple" aria-hidden="true">◷</span>
+          <div><span class="metric-label">Due this month</span><strong>03</strong><small>Next: Sept 22</small></div>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="projects-section" aria-labelledby="projects-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Your portfolio</p>
+              <h2 id="projects-heading">Projects</h2>
+            </div>
+            <button class="text-button" type="button">View all <span aria-hidden="true">→</span></button>
+          </div>
+          <div id="project-state" class="project-state" role="status" aria-live="polite">
+            <span class="loading-spinner" aria-hidden="true"></span> Loading projects…
+          </div>
+          <div id="project-list" class="project-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="sidebar" aria-label="Project updates">
+          <section class="panel activity-panel" aria-labelledby="activity-heading">
+            <div class="panel-heading">
+              <h2 id="activity-heading">Recent activity</h2>
+              <button class="icon-button" type="button" aria-label="More activity options">•••</button>
+            </div>
+            <ol class="activity-list">
+              <li><span class="activity-avatar teal">JL</span><div><p><strong>Jordan Lee</strong> moved <b>Mobile App v2</b> to In review</p><time datetime="2026-09-16T00:42">18 min ago</time></div></li>
+              <li><span class="activity-avatar orange">SK</span><div><p><strong>Sam Kim</strong> added a milestone to <b>Q4 Brand Refresh</b></p><time datetime="2026-09-15T22:10">2 hours ago</time></div></li>
+              <li><span class="activity-avatar purple">AM</span><div><p><strong>Alex Morgan</strong> completed the API security audit</p><time datetime="2026-09-15T18:35">Yesterday</time></div></li>
+              <li><span class="activity-avatar blue">RB</span><div><p><strong>Riley Brooks</strong> shared a new research brief</p><time datetime="2026-09-15T16:20">Yesterday</time></div></li>
+            </ol>
+            <button class="panel-link" type="button">See all activity <span aria-hidden="true">→</span></button>
+          </section>
+
+          <section class="panel attention-panel" aria-labelledby="attention-heading">
+            <div class="panel-heading">
+              <h2 id="attention-heading">Needs attention</h2>
+              <span class="count-badge">2</span>
+            </div>
+            <div class="attention-item">
+              <span class="attention-icon blocked" aria-hidden="true">!</span>
+              <div><strong>Checkout Redesign</strong><p>Blocked · Waiting on legal review</p></div>
+              <span class="priority-label high">High</span>
+            </div>
+            <div class="attention-item">
+              <span class="attention-icon risk" aria-hidden="true">↗</span>
+              <div><strong>Q4 Brand Refresh</strong><p>At risk · Scope is growing</p></div>
+              <span class="priority-label medium">Med</span>
+            </div>
+            <button class="panel-link" type="button">Review risks <span aria-hidden="true">→</span></button>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">Project Pulse <span aria-hidden="true">·</span> Last updated September 16, 2026</footer>
+  </div>
+
+  <template id="project-card-template">
+    <article class="project-card">
+      <div class="card-topline">
+        <span class="project-icon" aria-hidden="true"></span>
+        <span class="priority-label"></span>
+      </div>
+      <h3 class="project-name"></h3>
+      <p class="project-owner"></p>
+      <div class="project-detail">
+        <span class="status-indicator" aria-hidden="true"></span>
+        <span class="project-status"></span>
+      </div>
+      <div class="project-activity">
+        <span class="detail-label">Latest update</span>
+        <p class="project-recent"></p>
+      </div>
+      <div class="progress-row"><span>Progress</span><strong class="project-progress"></strong></div>
+      <div class="progress-track"><span class="progress-bar"></span></div>
+    </article>
+  </template>
+
+  <script>
+    const projectList = document.querySelector("#project-list");
+    const projectState = document.querySelector("#project-state");
+    const template = document.querySelector("#project-card-template");
+    const iconColors = ["violet", "blue", "coral", "teal", "gold", "indigo", "pink", "green"];
+
+    function showState(message, type) {
+      projectState.className = `project-state ${type}`;
+      projectState.textContent = message;
+      projectState.hidden = false;
+    }
+
+    function renderProjects(projects) {
+      if (!Array.isArray(projects)) {
+        throw new Error("Project data is not a list.");
+      }
+      if (projects.length === 0) {
+        showState("No projects to show yet.", "empty");
+        return;
+      }
+      projectState.hidden = true;
+      projects.forEach((project, index) => {
+        const card = template.content.cloneNode(true);
+        const icon = card.querySelector(".project-icon");
+        const priority = card.querySelector(".priority-label");
+        const status = card.querySelector(".project-status");
+        const progress = Number.isFinite(project.progress) ? project.progress : 0;
+        icon.classList.add(iconColors[index % iconColors.length]);
+        icon.textContent = project.name.charAt(0);
+        priority.textContent = `${project.priority} priority`;
+        priority.classList.add(project.priority.toLowerCase());
+        card.querySelector(".project-name").textContent = project.name;
+        card.querySelector(".project-owner").textContent = `Owned by ${project.owner}`;
+        status.textContent = project.status;
+        status.classList.add(project.status.toLowerCase().replace(/\s+/g, "-"));
+        card.querySelector(".project-recent").textContent = project.recentActivity;
+        card.querySelector(".project-progress").textContent = `${progress}%`;
+        card.querySelector(".progress-bar").style.width = `${progress}%`;
+        projectList.appendChild(card);
+      });
+    }
+
+    fetch("project-data.json")
+      .then((response) => {
+        if (!response.ok) throw new Error(`Project data request failed (${response.status}).`);
+        return response.json();
+      })
+      .then((data) => renderProjects(data.projects))
+      .catch(() => showState("We couldn’t load project data. Please refresh and try again.", "error"));
+  </script>
+</body>
+</html>
